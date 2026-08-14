@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
-import axios from 'axios'
+import { api } from './api'
+import { API_ENDPOINTS } from './api/endpoints'
 
-const API_BASE = 'http://127.0.0.1:8000'
 const STORAGE_KEY = 'aict_auth'
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
     setAuthError('')
 
     try {
-      const response = await axios.post(`${API_BASE}/api/v1/auth/login`, {
+      const response = await api.post(API_ENDPOINTS.auth.login, {
         username: credentials.username,
         password: credentials.password,
       })
@@ -84,8 +84,8 @@ function App() {
     setResult(null)
 
     try {
-      const response = await axios.post(
-        `${API_BASE}/api/v1/jd/extract`,
+      const response = await api.post(
+        API_ENDPOINTS.jd.extract,
         {
           raw_text: jdText,
         },
