@@ -1,13 +1,15 @@
 // src/types/jd.types.ts
+// Re-exports typed schemas generated from FastAPI OpenAPI specs.
+// Run `npm run generate-types` to refresh.
 
-export interface JdExtractRequest {
-  raw_text: string
-}
+import type { components } from './api.generated'
 
-export interface JdExtractResponse {
-  job_title: string
-  years_of_experience: string
-  must_have_skills: string[]
-  good_to_have_skills: string[]
-  potential_interview_questions: string[]
-}
+export type ExperienceInfo = components['schemas']['ExperienceInfo']
+export type SkillSet = components['schemas']['SkillSet']
+export type EducationInfo = components['schemas']['EducationInfo']
+export type JdExtractionResult = components['schemas']['JDExtractionModel']
+export type JdExtractRequest = components['schemas']['JobDescriptionRequest']
+
+// Backwards compatibility alias
+export type JdExtractResponse = JdExtractionResult
+
