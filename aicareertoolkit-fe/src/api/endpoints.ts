@@ -16,7 +16,13 @@ export const API_ENDPOINTS = {
     generate: '/api/v1/resume/generate',
   },
   memory: {
+    ingestPdf: '/api/v1/memory/ingest-pdf',
+    add: '/api/v1/memory/add',
+    getAll: '/api/v1/memory/',
+    update: (id: number) => `/api/v1/memory/${id}`,
+    delete: (id: number) => `/api/v1/memory/${id}`,
+    // legacy
     ingest: '/api/v1/memory/ingest',
-    query:  '/api/v1/memory/query',
+    query: '/api/v1/memory/query',
   },
 } as const
