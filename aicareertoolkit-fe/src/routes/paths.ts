@@ -9,4 +9,5 @@ export const PATHS = {
   atsResume:       '/tools/ats-resume',
   resumeGenerator: '/tools/resume-generator',
   memoryBank:      '/tools/memory-bank',
+  retrievalTest:   '/tools/retrieval-test',
 } as const
