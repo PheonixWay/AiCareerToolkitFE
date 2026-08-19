@@ -19,6 +19,7 @@ export const API_ENDPOINTS = {
     ingestPdf: '/api/v1/memory/ingest-pdf',
     add: '/api/v1/memory/add',
     getAll: '/api/v1/memory/',
+    testRetrieval: '/api/v1/memory/test-retrieval',
     update: (id: number) => `/api/v1/memory/${id}`,
     delete: (id: number) => `/api/v1/memory/${id}`,
     // legacy
