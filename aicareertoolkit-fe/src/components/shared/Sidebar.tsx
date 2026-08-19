@@ -10,6 +10,7 @@ import {
   FileSearch,
   Sparkles,
   Brain,
+  FlaskConical,
   LogOut,
   ChevronLeft,
   ChevronRight,
@@ -32,6 +33,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'ATS Resume',       path: PATHS.atsResume,       icon: FileText },
   { label: 'Resume Generator', path: PATHS.resumeGenerator, icon: Sparkles },
   { label: 'Memory Bank',      path: PATHS.memoryBank,      icon: Brain },
+  { label: 'Retrieval Test',   path: PATHS.retrievalTest,   icon: FlaskConical },
 ]
 
 export const Sidebar: FC = () => {

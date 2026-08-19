@@ -13,6 +13,7 @@ import { JdExtractorPage } from '@/pages/jd-extractor/JdExtractorPage'
 import { AtsResumePage } from '@/pages/ats-resume/AtsResumePage'
 import { ResumeGeneratorPage } from '@/pages/resume-generator/ResumeGeneratorPage'
 import { MemoryBankPage } from '@/pages/memory-bank/MemoryBankPage'
+import { RetrievalTestPage } from '@/pages/retrieval-test/RetrievalTestPage'
 
 // Layout
 import { AppLayout } from '@/components/shared/AppLayout'
@@ -37,6 +38,7 @@ export const AppRouter = () => {
           <Route path={PATHS.atsResume} element={<AtsResumePage />} />
           <Route path={PATHS.resumeGenerator} element={<ResumeGeneratorPage />} />
           <Route path={PATHS.memoryBank} element={<MemoryBankPage />} />
+          <Route path={PATHS.retrievalTest} element={<RetrievalTestPage />} />
         </Route>
 
         {/* Fallback — redirect root to dashboard */}
